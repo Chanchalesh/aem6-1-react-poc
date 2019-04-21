@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Banner"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <bannerlinks
+                    jcr:primaryType="nt:unstructured"
+                    title="Banner Left With Links"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <heading
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="false"
+                            fieldLabel="Heading Text"
+                            name="./heading"
+                            xtype="textfield"/>
+                        <subheading
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Subheading"
+                            name="./subheading"
+                            width="150"
+                            xtype="textfield"/>
+                     <dropimage
+                            jcr:primaryType="cq:Widget"
+                            allowUpload="false"
+                            autoUploadDelay="1"
+                            ddGroups="[media]"
+                            fieldLabel="Image"
+                            fileNameParameter="./imageName"
+                            fileReferenceParameter="./imagePathDrop"
+                            height="250"
+                            mimeTypes="*.jpg;*.jpeg;*.gif;*.png"
+                            mimeTypesDescription="Images"
+                            name="./imgpath"
+                            sizeLimit="100"
+                            title="Drop the Image Here"
+                            xtype="html5smartimage"/>
+                    </items>
+                </bannerlinks>
+                <analytics
+                    jcr:primaryType="nt:unstructured"
+                    title="Analytics"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <event_component_headline
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Headline"
+                            name="./event_component_headline"
+                            xtype="textfield"/>
+                        <event_component_name
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Name"
+                            name="./event_component_name"
+                            xtype="textfield"/>
+                        <event_title
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Title"
+                            name="./event_title"
+                            xtype="textfield"/>
+                        <event_source
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Source"
+                            name="./event_source"
+                            xtype="textfield"/>
+                    </items>
+                </analytics>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>
