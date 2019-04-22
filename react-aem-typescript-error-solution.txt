@@ -1,0 +1,27 @@
+Creating react component:
+1.Start npm watch task
+Start the watch task which transpiles, bundles and uploads the javascript files to AEM.
+Open console to folder /src/main/ts and run the watch task npm run watch
+ERROR in D:\CQ5\Components\aem-react-master\aem-react-master\demo\src\main\ts\typings\globals\react\index.d.ts
+(159,11): error TS2559: Type 'Component<P, S>' has no properties in common with type 'ComponentLifecycle<P, S>'.
+
+ERROR in ./componentRegistry.tsx
+(14,19): error TS2345: Argument of type 'typeof Embedded' is not assignable to parameter of type 'typeof Component'.
+  Types of parameters 'props' and 'props' are incompatible.
+    Type 'P' is not assignable to type 'ResourceProps'.
+
+To avoid this error check the typescript version using tsc -v command.
+Downgrade version to 2.3.2
+
+npm install -g typescript@2.3.2
+
+
+
+
+Check package.json for AEM port number.
+
+"config": {
+    "crx": "http://admin:admin@localhost:4502/crx/repository/crx.default"
+  },
+
+or you can directly set it using below command
